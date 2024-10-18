@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
      * primero es necesario crear como quieres que se vea cada fila de la lista personalizada layout-> fila_lista
      */
     private val listadoCiudades= arrayOf("leon", "valladolid", "pucela", "desdees")
-    private val listadoFotosCiudad = intArrayOf(/*los id desde drawable de las fotos*/)
+    private val listadoFotosCiudad = intArrayOf(R.drawable.leon, R.drawable.valladolid, R.drawable.pucela, R.drawable.desde)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
