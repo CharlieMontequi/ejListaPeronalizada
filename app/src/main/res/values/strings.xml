@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ejListaPeronalizada</string>
+    <string-array name="arrayCiudades">
+        <item>León</item>
+        <item>Valladolid</item>
+        <item>Palencia</item>
+        <item>Zamaro</item>
+        <item>Burgos</item>
+    </string-array>
+
+</resources>
