@@ -37,6 +37,8 @@ class MainActivity : AppCompatActivity() {
         // se establece el adaptadorPersonalizado-> que debe ser una clase interna para que pueda acceder
         // a los datos de los array y a las vistas definidas
         val adaptadorPersonalizado = AdaptadorPersonalizado(this, R.layout.fila_lista,listadoCiudades)
+       listaCiudades.adapter= adaptadorPersonalizado
+
 
     }
 // adaptador personalizado con los paramatros que requiere el arrayAdapter correspondiente que es el que hereda
