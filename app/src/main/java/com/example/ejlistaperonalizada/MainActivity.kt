@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
      */
     private val listadoCiudades= arrayOf("leon", "valladolid", "pucela", "desdees")
     private val listadoFotosCiudad = intArrayOf(R.drawable.leon, R.drawable.valladolid, R.drawable.pucela, R.drawable.desde)
-   // private val listaSitiosStrings: Array<String> = resources.getStringArray(R.string.arrayCiudades) // no entiendo porque no lo reconoce
+  //  private val listaSitiosStrings: Array<String> = resources.getStringArray(R.array.arrayCiudades) // no entiendo porque no lo reconoce
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
