@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
      */
     private val listadoCiudades= arrayOf("leon", "valladolid", "pucela", "desdees")
     private val listadoFotosCiudad = intArrayOf(R.drawable.leon, R.drawable.valladolid, R.drawable.pucela, R.drawable.desde)
+   // private val listaSitiosStrings: Array<String> = resources.getStringArray(R.string.arrayCiudades) // no entiendo porque no lo reconoce
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,10 +33,10 @@ class MainActivity : AppCompatActivity() {
         // tras asociar las vistas con su correspondiente se crea el layout
         val listaCiudades = findViewById<ListView>(R.id.listView_listadoCiudades)
         val textViewCiudadSeleccionada = findViewById<TextView>(R.id.textView_ciudadSeleccionada)
+
         // se establece el adaptadorPersonalizado-> que debe ser una clase interna para que pueda acceder
         // a los datos de los array y a las vistas definidas
-      //  val listaProvincias:Array<String> = arrayOf(R.string.arrayCiudades)
-val adaptadorPersonalizado = AdaptadorPersonalizado(this, R.layout.fila_lista,listadoCiudades)
+        val adaptadorPersonalizado = AdaptadorPersonalizado(this, R.layout.fila_lista,listadoCiudades)
 
     }
 // adaptador personalizado con los paramatros que requiere el arrayAdapter correspondiente que es el que hereda
@@ -50,7 +51,7 @@ val adaptadorPersonalizado = AdaptadorPersonalizado(this, R.layout.fila_lista,li
 
         ///// CREO-PIENSO-IMAGINO////
         private fun crearFilaPersonalizada(
-            position: Int,
+            posicion: Int,
             convertView: View?,
             parent: ViewGroup
         ): View {
@@ -72,11 +73,11 @@ val adaptadorPersonalizado = AdaptadorPersonalizado(this, R.layout.fila_lista,li
              */
 
             //Fijamos el nombre de la ciudad
-            rowView.findViewById<TextView>(R.id.textView_nombreCiudad).text = listadoCiudades[position]
+            rowView.findViewById<TextView>(R.id.textView_nombreCiudad).text = listadoCiudades[posicion]
 
 
             //Fijamos la imagen de la ciudad
-            rowView.findViewById<ImageView>(R.id.imageView_ciudad).setImageResource(listadoFotosCiudad[position])
+            rowView.findViewById<ImageView>(R.id.imageView_ciudad).setImageResource(listadoFotosCiudad[posicion])
 
             // Devuelve la vista de fila personalizada
             return rowView
