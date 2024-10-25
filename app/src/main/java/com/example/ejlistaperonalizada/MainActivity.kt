@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         ///// CREO-PIENSO-IMAGINO////
         private fun crearFilaPersonalizada(
             posicion: Int,
-            convertView: View?,
+            convertView: View?,// aqui resivar los tipos para mandar un constrait layout en ligar de una vista que es donde esta el error
             parent: ViewGroup
         ): View {
 
